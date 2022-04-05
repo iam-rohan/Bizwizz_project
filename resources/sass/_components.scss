@@ -1,0 +1,24 @@
+.btn {
+	&:link,
+	&:visited {
+		width:20rem;
+		display:block;
+		text-transform:uppercase;
+		color:var(--color-primary);
+		background-color:var(--color-white);
+		text-decoration:none;
+		padding:1.6rem;
+		font-weight:500;
+
+		background-size:250%;
+		background-image:linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary) 50%);
+		transition: all .5s;
+	}
+
+	&:hover,
+	&active {
+		background-position: 100%;
+		color:var(--color-white);
+		transform:translateX(2rem);
+	}
+}
