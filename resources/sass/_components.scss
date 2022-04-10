@@ -22,3 +22,53 @@
 		transform:translateX(2rem);
 	}
 }
+
+.services {
+	display:flex;
+	margin:0 6rem;
+	flex-wrap:wrap;
+}
+
+.service-box {
+	background-color:var(--color-lightgrey);
+	width:20rem;
+	margin:1.5rem;
+	flex:1 1 30%;
+	display:flex;
+	align-items:center;
+	justify-contents:center;
+	overflow:hidden;
+
+	&__title {
+		color:black;
+		font-size:2.3rem;
+		padding:3rem 6rem 3rem 0rem;
+		font-weight:500;
+		transform:translate(-1.6rem);
+		transition:all .5s;
+	}
+
+	&__icon {
+		height:11rem;
+		width:4.8rem;
+		fill:var(--color-primary-light);
+		opacity:0;
+		transform:scale(0.5);
+		transition: all 0.5s;
+	}
+
+	&:hover {
+		background-color:var(--color-primary);
+	}
+	
+
+	&:hover &__title {
+		color:var(--color-white);
+		transform:translate(3rem);
+	}
+
+	&:hover &__icon {
+		opacity:0.7;
+		transform:scale(1.4);
+	}
+}
