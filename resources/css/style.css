@@ -106,13 +106,16 @@ body {
   text-transform: capitalize;
   margin-bottom: 2.4rem; }
 
-.section-services, .section-team {
+.section-services, .section-team, .section-portfolio {
   background-color: var(--color-white);
   text-align: center;
   padding-bottom: 8rem; }
 
 .section-team {
   background-color: var(--color-black); }
+
+.section-portfolio {
+  background-color: var(--color-white); }
 
 .btn:link, .btn:visited {
   width: 20rem;
@@ -230,3 +233,23 @@ body {
   margin: 2.6px; }
   .facebook__icon:hover, .twitter__icon:hover, .linkedin__icon:hover {
     fill: var(--color-primary-light); }
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .portfolio__column {
+    flex-basis: 30%;
+    margin: 0.5rem; }
+  .portfolio__image {
+    width: 100%;
+    margin-top: .5rem;
+    overflow: hidden; }
+    .portfolio__image img {
+      width: 100%;
+      height: auto;
+      filter: saturate(0%) brightness(100%) contrast(100%);
+      transition: all .5s; }
+      .portfolio__image img:hover {
+        filter: none;
+        transform: scale(1.2); }

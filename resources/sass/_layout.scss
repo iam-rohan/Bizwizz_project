@@ -92,7 +92,7 @@
 	}
 }
 
-.section-services, .section-team {
+.section-services, .section-team, .section-portfolio {
 	background-color:var(--color-white);
 	text-align:center;
 	padding-bottom:8rem;
@@ -100,4 +100,8 @@
 
 .section-team {
 	background-color:var(--color-black);
+}
+
+.section-portfolio {
+	background-color:var(--color-white);
 }

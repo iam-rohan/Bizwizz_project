@@ -159,3 +159,32 @@
 		}
 	}
 }
+
+.portfolio {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	&__column {
+		flex-basis:30%;
+		margin:0.5rem;
+	}
+
+	&__image {
+		width:100%;
+		margin-top:.5rem;
+		overflow:hidden;
+
+		& img {
+			width:100%;
+			height:auto;
+			filter: saturate(0%) brightness(100%) contrast(100%);
+			transition:all .5s;
+
+			&:hover {
+				filter:none;
+				transform:scale(1.2);
+			}
+		}
+	}
+}
