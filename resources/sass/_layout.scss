@@ -92,8 +92,12 @@
 	}
 }
 
-.section-services {
+.section-services, .section-team {
 	background-color:var(--color-white);
 	text-align:center;
 	padding-bottom:8rem;
+}
+
+.section-team {
+	background-color:var(--color-black);
 }
