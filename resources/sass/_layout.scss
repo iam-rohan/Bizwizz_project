@@ -92,13 +92,13 @@
 	}
 }
 
-.section-services, .section-team, .section-portfolio {
+.section-services, .section-team, .section-portfolio, .section-testimonials {
 	background-color:var(--color-white);
 	text-align:center;
 	padding-bottom:8rem;
 }
 
-.section-team {
+.section-team, .section-testimonials {
 	background-color:var(--color-black);
 }
 

@@ -183,8 +183,130 @@
 
 			&:hover {
 				filter:none;
-				transform:scale(1.2);
+				transform:scale(1.1);
 			}
 		}
+	}
+}
+
+.container {
+	width:30%;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.testimonial-card {
+	height:40rem;
+	width:100%;
+	background-color:var(--color-darkgrey-2);
+	text-align:left;
+	padding:4rem;
+	margin:3rem 0;
+	border: 3px solid var(--color-darkgrey-2);
+	display:flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+
+	&:hover {
+		border: 3px solid var(--color-primary);
+	}
+
+	&__stars {
+
+	}
+
+	&__icon {
+		height:1.5rem;
+		width:1.5rem;
+		fill:var(--color-yellow);
+	}
+
+	&__para {
+		font-size:1.9rem;
+		color:var(--color-lightgrey);
+	}
+
+	&__client {
+		display:flex;
+
+		& .image-shape {
+			height:8rem;
+			width:8rem;
+			border-radius:50%;
+			overflow:hidden;
+
+			& img {
+				height:100%;
+			}
+		}
+
+		& .client-info {
+			font-size:1.8rem;
+			margin-left:3rem;
+
+			&__name {
+				color:var(--color-white);
+				font-weight:800;
+			}
+
+			&__designation {
+				color:var(--color-primary);
+				font-weight:500;
+			}
+		}
+	}
+}
+
+.carousel {
+
+	//overflow:hidden;
+	display:flex;
+	flex-direction:column;
+
+	&__slider {
+		display:flex;
+		width: 300%;
+		transition:all .4s;
+	}
+
+	&__radio-btn {
+		display:none;
+	}
+
+	&__nav {
+		display:flex;
+		order:1;
+		justify-content:center;
+	}
+
+	&__radio-label {
+		display:block;
+		width:1.2rem;
+		height:1.2rem;
+		border-radius:50%;
+		border:2px solid var(--color-primary);
+		margin:1.6rem;
+		cursor:pointer;
+		background-color:white;
+	}
+
+	&__radio-btn:checked:nth-of-type(1) ~ &__nav &__radio-label:nth-of-type(1) {
+		background-color:var(--color-primary);
+	}
+
+	&__radio-btn:checked:nth-of-type(2) ~ &__nav &__radio-label:nth-of-type(2) {
+		background-color:var(--color-primary);
+	}
+
+	&__radio-btn:checked:nth-of-type(3) ~ &__nav &__radio-label:nth-of-type(3) {
+		background-color:var(--color-primary);
+	}
+
+	&__radio-btn:checked:nth-of-type(2) ~ &__slider {
+		transform:translate(-33.33%);
+	}
+
+	&__radio-btn:checked:nth-of-type(3) ~ &__slider {
+		transform:translate(-66.66%);
 	}
 }
