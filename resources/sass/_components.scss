@@ -310,3 +310,120 @@
 		transform:translate(-66.66%);
 	}
 }
+
+.contact {
+	display:flex;
+
+	&__column {
+		background-color:var(--color-lightgrey-2);
+		border-radius:5px;
+		padding:1.6rem 3rem;
+		margin:.8rem 1.2rem;
+		font-size:1.6rem;
+		color:var(--color-black);
+		text-align:left;
+
+		&--left {
+			flex:35%;
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+
+			& > p {
+				margin-top:2rem;
+			}
+		}
+
+		&--right {
+			flex:65%;
+		}
+
+	}
+
+	&__info {
+		display:flex;
+		margin-top:2rem;
+		align-items:center;
+	}
+
+	&__icon-div {
+		margin-right:1.6rem;
+	}
+
+	&__icon {
+		height:2.4rem;
+		width:2.4rem;
+		fill:var(--color-primary);
+	}
+
+	&__detail-div {
+		text-align:left;
+	}
+
+	&__para {
+		fonr-size:1.6rem;
+
+		&--1 {
+			font-weight:800;
+		}
+	}
+}
+
+.form {
+	margin-top:2rem;
+
+	&__name-email {
+		display:flex;
+		justify-content:space-between;
+
+		& input {
+			border:2px solid var(--color-primary);
+			flex-basis:48%;
+		}
+	}
+
+	&__input, &__textarea {
+		font-size:1.9rem;
+		font-family:inherit;
+		padding:0.5rem;
+		border-radius: 10px;
+		border:1px solid var(--color-lightgrey);
+		width:100%;
+		margin-top:1.6rem;
+
+		&::placeholder {
+			font-size:1.6rem;
+		}
+
+		&:focus {
+			outline:none;
+		}
+	}
+
+	&__textarea {
+		height:20rem;
+	}
+
+	&__btn {
+		margin-top:2rem;
+
+		& .btn {
+			&:link,
+			&:visited {
+				background-color:var(--color-primary);
+				color:var(--color-white);
+				border-radius:10px;
+				text-align:center;
+				background-size:250%;
+				background-image:linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+				transition: all .5s;
+				border:1px solid var(--color-primary);
+			}
+			&:hover,
+			&active {
+				color:var(--color-primary);
+				border:1px solid var(--color-primary);
+			}
+		}
+	}
+}
