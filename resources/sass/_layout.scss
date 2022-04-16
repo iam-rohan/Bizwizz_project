@@ -105,3 +105,53 @@
 .section-portfolio {
 	background-color:var(--color-white);
 }
+
+.section-cta {
+	background-color:var(--color-darkgrey-2);
+	padding:3rem;
+}
+
+.footer {
+
+	display:flex;
+	justify-content:space-between;
+	padding:3rem 3rem;
+	align-items:baseline;
+
+	&__copyright {
+
+	}
+
+	&__nav {
+		& ul {
+			list-style:none;
+			display:flex;
+
+			& li {
+				margin-left:1rem;
+
+				& a {
+					text-decoration:none;
+					color:var(--color-white);
+					padding-bottom:5px;
+
+					&:link,
+					&:visited {
+						border-bottom:2px solid transparent;
+						transition:border-bottom 0.3s;
+					}
+
+					&:hover,
+					&:active {
+						border-bottom:2px solid var(--color-primary);
+					}
+				}
+			}
+		}
+	}
+
+	&__author {
+		text-decoration:none;
+		color:var(--color-white);
+	}
+}

@@ -117,6 +117,33 @@ body {
 .section-portfolio {
   background-color: var(--color-white); }
 
+.section-cta {
+  background-color: var(--color-darkgrey-2);
+  padding: 3rem; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 3rem;
+  align-items: baseline; }
+  .footer__nav ul {
+    list-style: none;
+    display: flex; }
+    .footer__nav ul li {
+      margin-left: 1rem; }
+      .footer__nav ul li a {
+        text-decoration: none;
+        color: var(--color-white);
+        padding-bottom: 5px; }
+        .footer__nav ul li a:link, .footer__nav ul li a:visited {
+          border-bottom: 2px solid transparent;
+          transition: border-bottom 0.3s; }
+        .footer__nav ul li a:hover, .footer__nav ul li a:active {
+          border-bottom: 2px solid var(--color-primary); }
+  .footer__author {
+    text-decoration: none;
+    color: var(--color-white); }
+
 .btn:link, .btn:visited {
   width: 20rem;
   display: block;
@@ -342,14 +369,14 @@ body {
     color: var(--color-black);
     text-align: left; }
     .contact__column--left {
-      flex: 35%;
+      flex: 30%;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
       .contact__column--left > p {
         margin-top: 2rem; }
     .contact__column--right {
-      flex: 65%; }
+      flex: 70%; }
   .contact__info {
     display: flex;
     margin-top: 2rem;
@@ -403,3 +430,28 @@ body {
     .form__btn .btn:hover, .form__btn .btnactive {
       color: var(--color-primary);
       border: 1px solid var(--color-primary); }
+
+.cta__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.cta__text {
+  color: var(--color-white);
+  font-size: 4rem;
+  font-weight: 500; }
+
+.socialmedia__icons {
+  display: flex;
+  justify-content: space-evenly; }
+
+.social__icon {
+  height: 3.3rem;
+  width: 3.3rem;
+  margin: 1rem 2rem 0 0;
+  fill: var(--color-primary);
+  transition: all .5s; }
+  .social__icon:link, .social__icon:visited {
+    transform: scale(1); }
+  .social__icon:hover, .social__icon:active {
+    transform: scale(1.2); }
