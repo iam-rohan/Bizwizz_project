@@ -38,13 +38,27 @@
 	justify-contents:center;
 	overflow:hidden;
 
+	@media only screen and (max-width: $breakpoint-620) {
+		flex:1 1 100%;
+		background-color:var(--color-primary);
+		padding:1rem;
+	}
+
 	&__title {
-		color:black;
+		color:var(--color-black);
 		font-size:2.3rem;
 		padding:3rem 6rem 3rem 0rem;
 		font-weight:500;
 		transform:translate(-1.6rem);
 		transition:all .5s;
+
+		@media only screen and (max-width: $breakpoint-620) {
+			font-size:2rem;
+			transform:translate(0);
+			padding:2rem;
+			margin:0 auto;
+			color:var(--color-white);
+		}
 	}
 
 	&__icon {
@@ -54,6 +68,10 @@
 		opacity:0;
 		transform:scale(0.5);
 		transition: all 0.5s;
+
+		@media only screen and (max-width: $breakpoint-620) {
+			display:none;
+		}
 	}
 
 	&:hover {
@@ -64,6 +82,10 @@
 	&:hover &__title {
 		color:var(--color-white);
 		transform:translate(3rem);
+
+		@media only screen and (max-width: $breakpoint-620) {
+			transform:translate(0);
+		}
 	}
 
 	&:hover &__icon {
@@ -86,6 +108,10 @@
 	background-size:cover;
 	background-position:center;
 	position:relative;
+
+	@media only screen and (max-width: $breakpoint-479) {
+		margin-top:1rem;
+	}
 
 	&--1 {
 		background-image:url(team-mate-1.jpg);
@@ -164,10 +190,15 @@
 	display:flex;
 	justify-content:center;
 	align-items:center;
+	flex-wrap:wrap;
 
 	&__column {
 		flex-basis:30%;
 		margin:0.5rem;
+
+		@media only screen and (		max-width: $breakpoint-620) {
+			flex-basis:80%;
+		}
 	}
 
 	&__image {
@@ -181,9 +212,17 @@
 			filter: saturate(0%) brightness(100%) contrast(100%);
 			transition:all .5s;
 
+			@media only screen and (		max-width: $breakpoint-620) {
+				filter:none;
+			}
+
 			&:hover {
 				filter:none;
 				transform:scale(1.1);
+
+				@media only screen and (		max-width: $breakpoint-620) {
+					transform:scale(1);
+				}
 			}
 		}
 	}
@@ -193,6 +232,18 @@
 	width:30%;
 	margin:0 auto;
 	overflow:hidden;
+
+	@media only screen and (		max-width: $breakpoint-1000) {
+		width:45%;
+	}
+
+	@media only screen and (		max-width: $breakpoint-760) {
+		width:50%;
+	}
+
+	@media only screen and (		max-width: $breakpoint-620) {
+		width:70%;
+	}
 }
 
 .testimonial-card {
@@ -206,6 +257,10 @@
 	display:flex;
 	flex-direction: column;
 	justify-content:space-evenly;
+
+	@media only screen and (		max-width: $breakpoint-1000) {
+		padding:1.4rem;
+	}
 
 	&:hover {
 		border: 3px solid var(--color-primary);
@@ -313,6 +368,7 @@
 
 .contact {
 	display:flex;
+	flex-wrap:wrap;
 
 	&__column {
 		background-color:var(--color-lightgrey-2);
@@ -324,7 +380,7 @@
 		text-align:left;
 
 		&--left {
-			flex:30%;
+			flex:25%;
 			display:flex;
 			flex-direction:column;
 			justify-content:space-between;
@@ -335,7 +391,7 @@
 		}
 
 		&--right {
-			flex:70%;
+			flex:65%;
 		}
 
 	}
@@ -375,10 +431,15 @@
 	&__name-email {
 		display:flex;
 		justify-content:space-between;
+		flex-wrap:wrap;
 
 		& input {
 			border:2px solid var(--color-primary);
 			flex-basis:48%;
+
+			@media only screen and (max-width: $breakpoint-760) {
+				flex-basis:100%;
+			}
 		}
 	}
 
@@ -429,16 +490,37 @@
 }
 
 .cta {
+	
 	&__items {
 		display:flex;
-		justify-content:space-between;
-		align-items:baseline;
+		justify-content:space-around;
+		align-items:center;
+		flex-wrap:wrap;
 	}
 
 	&__text{
 		color:var(--color-white);
 		font-size:4rem;
 		font-weight: 500;
+
+		@media only screen and (max-width: $breakpoint-403) {
+			margin-top:1rem;
+		}
+	}
+
+	&__btn {
+		@media only screen and (max-width: $breakpoint-403) {
+			margin-top:1rem;
+		}
+
+		@media only screen and (max-width: $breakpoint-604) {
+			margin-top:2rem;
+		}
+
+		@media only screen and (max-width: $breakpoint-620) {
+			margin-left:2rem;
+			margin-top:2rem;
+		}
 	}
 }
 

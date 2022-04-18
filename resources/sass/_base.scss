@@ -38,7 +38,22 @@ html {
     --color-yellow:#f2cf0d;   
 }
 
+//SASS VARIABLES
+
 $color-primary: #ce367c;
+
+//RESPONSIVENESS VARIABLES
+
+$breakpoint-1000: 62.5em;
+$breakpoint-760: 47.5em;
+$breakpoint-620: 38.75em;
+$breakpoint-604: 37.75em;
+$breakpoint-500: 31.25em;
+$breakpoint-479: 29.9375em;
+$breakpoint-403: 25.1875em;
+
+
+
 
 body {
     font-family:"Work Sans", sans-serif;
